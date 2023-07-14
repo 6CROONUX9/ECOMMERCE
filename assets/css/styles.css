@@ -70,7 +70,9 @@ body.dark-theme {
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+html{
+    scroll-behavior: smooth;
+}
 body::-webkit-scrollbar{
     -webkit-appearance: none;
     width: 15px;
