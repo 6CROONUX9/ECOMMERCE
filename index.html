@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-COMMERCE | PROYECTO | FINAL </title>
+    <link rel="icon" href="./images/logo.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js"
+        integrity="sha512-nKZDK+ztK6Ug+2B6DZx+QtgeyAmo9YThZob8O3xgjqhw2IVQdAITFasl/jqbyDwclMkLXFOZRiytnUrXk/PM6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/main.js" defer></script>
+</head>
+<body > 
+    
+    
+    <!--nuestra class="dark" del body-->
+    <div class="container__body">
+            <!--contenido de carga-->
+    <div class="loader-wrapper">
+        <div class="loader"></div>
+        
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+
+
+        <header >
+            <nav class="navbar">
+                
+                <div class="navbar_boton">
+                    <div class="navbar_boton_logo">
+                        
+                        <div class="navbar_logo-img">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48.92 56.48" class="nav_logo-icon">
+                                <title>Academlo Logo</title>
+                                <g>
+                                    <g>
+                                        <path d="M28.58,15.39H25.16L35.78,36H31.49L20.67,15.71,8.23,38.82H18.94l3-5.43h-3.4l-1.47,2.54h-4l2.69-5.09H25.85l4.28,8H40.67ZM17.23,28.21l3.57-6.6,3.57,6.6Z">
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <!--<img src="./images/logo.png" alt="">-->
+                        </div>
+                        <a href="#home" class="navbar_logo">STORE</a>
+                    </div>
+                    <a href="#home" class="navbar_indentificar"> Home</a>
+                    <a href="#products" class="navbar_indentificar">Products</a>
+                </div>
+                
+                <div class="navbar_boton">
+                    <label for="toggle" id="label_toggle"><i class='bx bxs-moon bx-tada-hover'></i></label>
+                    <input type="checkbox" id="toggle">
+                    <i class='bx bx-cart bx-tada-hover icon__cart'>
+                        <span class="amountProducts"></span>
+                    </i>
+                </div>
+            </nav>
+    
+            <a onclick="openNav()" class="menu" href="#"><i class='bx bx-menu bx-tada-hover menuHeader'></i></a> <!--<i class='bx bx-menu'</i>-->
+                
+            <div class="overlay" id="mobile-menu">
+                <a onclick="closeNav()" href="" class="close">&times;</a>
+                <div class="overlay-content">
+                    <a href="#home" class="navbar_logo">STORE</a>
+                    <a href="#home" class="navbar_indentificar"> Home</a>
+                    <a href="#products" class="navbar_indentificar">Products</a>
+                </div>
+            </div>
+        </header>
+        <div class="container">
+    
+            <section class="home" id="home">
+                <div class="home_header">
+                    <div class="home_header-img">
+                        <img src="./images/sweater2.png" alt="">
+                    </div>
+                </div>
+                <div class="home_body">
+                    <h2 class="home_body-title">New Sweatshirt
+                        COLLECTIONS 2023</h2>
+                    <p class="home_body-paragragh">Latest arrival of the new Hanes Midweight Crewneck sweatshirt imported
+                        from
+                        the 2022 series, with
+                        a modern design.</p>
+                    <p class="home_body-price">$14.00</p>
+                    <a href="#products" class="home_body-btn">Show more</a>
+                </div>
+            </section>
+    
+            <section class="content_products" id="products"> <!--class="content_products scrollPy"-->
+                <div class="content_filter">
+                    <!-- se encarga de los botones de cactegoria-->
+                    <div class="buttons">
+                        <button class="btn" id="all" data-filter="all">Show all
+                            <p>Show all products</p>
+                        </button>
+                        <button class="btn" id="shirt" data-filter=".shirt">shirt <span class="categoriasProducts"></span></button>
+                        <button class="btn" id="hoddie" data-filter=".hoddie">hoddie</button>
+                        <button class="btn" id="sweater" data-filter=".sweater">sweater</button>
+                    </div>
+                </div>
+                <div class="products"></div>
+        
+            </section>
+            <!--<div class="products"></div>-->
+            <div class="cart">
+                <span class="cart__stop">X</span>
+                <div class="cart__products"></div>
+                <div class="cart__total"></div>
+                <div class="cart__total--info">
+                    <span class="info__total"></span>
+                    <span class="info__amount"></span>
+                </div>
+                <button class="btn__buy">Comprar</button>
+            </div>
+            
+        </div>
+        <div class="modal-danilo"></div>
+        <footer>
+            <nav>
+                <div class="footerInfo">
+                    <div class="footer__info">
+                        <h3>Our information</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Toluca - México</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__info">
+                        <h3>About Us</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Support Center</a>
+                            </li>
+                            <li>
+                                <a href="#">Customer Support</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Copy Right</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__info">
+                        <h3>Product</h3>
+                        <ul>
+                            <li>
+                                <a href="#">Hoodies</a>
+                            </li>
+                            <li>
+                                <a href="#">Shirts</a>
+                            </li>
+                            <li>
+                                <a href="#">About Us</a>
+                            </li>
+                            <li>
+                                <a href="#">Sweatshirts</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__info">
+                        <h3>Social</h3>
+                        <ul class="footer__link">
+                            <li>
+                                <a href="https://www.youtube.com/channel/UC1Va0Cw7ZONp1UuuDyp-kMw" class='bx bxl-youtube bx-tada-hover' style='color:var(--text-color)'></a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/6CROONUX9?tab=repositories" class='bx bxl-github bx-tada-hover' style='color:var(--text-color)' ></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/daniloflorez69/?next=%2F"  class='bx bxl-instagram bx-tada-hover' style='color:var(--text-color)' ></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footerTexto">
+                    <p>JERSON DANILO FLOREZ PARRA, jerchiton.97@gmail.com y <a href="https://app.netlify.com/teams/6croonux9/overview">repositorio</a> de la persona que lo realizo</p>
+                </div>
+            </nav>
+        </footer>
+    </div>
+</body>
+</html>
