@@ -63,6 +63,7 @@ body.dark-theme {
     --middle-line-color: hsla(183, 53%, 74%, 0.507);
     --inner-line-color: hsl(249, 19%, 14%);
 }
+
 *{
     margin: 0;
     padding: 0;
@@ -70,6 +71,17 @@ body.dark-theme {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 15px;
+}
+body::-webkit-scrollbar-track{
+    background-color: var(--headerMenu);
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--first-color);
+    border-radius: 1rem;
+}
 img{
     width: 100%;
     display: block;
@@ -521,6 +533,19 @@ header > nav {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+}
+
+.cart__products::-webkit-scrollbar{
+    -webkit-appearance: none;
+    width: 15px;
+}
+.cart__products::-webkit-scrollbar-track{
+    background-color: var(--headerMenu);
+    
+}
+.cart__products::-webkit-scrollbar-thumb{
+    background-color: var(--first-color);
+    border-radius: 1rem;
 }
 .cart__product{
     box-shadow: var(--general-shadow);
